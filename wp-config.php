@@ -20,13 +20,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
+define('DB_NAME', 'multragatan');
 
 /** MySQL database username */
-define('DB_USER', 'wordpressuser');
+define('DB_USER', 'multragatanuser');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'motnguoivimoinguoi34');
+define('DB_PASSWORD', 'Motnguoivimoinguoi34');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -46,14 +46,26 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'n;MfWQp>+H:QwqA6M/p,O!krTm/H6`rNPV*.Cmh!y!})F0C9G97v@cLNX^SHz&9&');
-define('SECURE_AUTH_KEY',  'EcRy1q7nB]|,rL~ZQTJw3[ SQnF$kPb]_+){K3Lu*ij?.^ >Cy?]6]`kM$P&=|1/');
-define('LOGGED_IN_KEY',    '-GI(ka<i8W]&HE~mN_axc7{MEMLf[J|Q-R[:YeFez1p?*g;F7=84R@.%#P_,NXpT');
-define('NONCE_KEY',        'Tdv}BCF7^3+{tUUIbc&<Mx `~BTD43?g%_?=|lo@0/LGb$sS.,[I?vn1{&y88HJF');
-define('AUTH_SALT',        ',lmH)i60g2twC7YSc63n ,F>]B`y2o2D,PCeO(x9,+^Y w.<$-),N=?H%)JcvY!}');
-define('SECURE_AUTH_SALT', 'YF!k-]cJt-ahW})TpJ+`LSP2lv+ZqsHz*51sC6#$+P3l+Zc<J/Me)cHB>T;B`(q`');
-define('LOGGED_IN_SALT',   'ZJY?DddH@5d`jlLS@K@Fln,Rwzv}xZxIFG94n!u{xn+9Gq|7 ,?U_1i|+XxYJF60');
-define('NONCE_SALT',       '+|Ev]z=p[~(6Y&w><9AkA<m[xkb! |LFtfDDFdy<Yf+O^0(@#DS}i<yO-5q+v2>7');
+define('AUTH_KEY',         'KgkNUmc1ZITVdLoXjiaHw12QHESkoQliaUwfMxDaLAZ6X2itvA5vshiC0wLpKgBo');
+define('SECURE_AUTH_KEY',  'upwCcUFFNcxLao6jSnv5hG9lYo5XFiAtq21lkJ6JDHeVuwIbGQbSKGrpmmVTvcBa');
+define('LOGGED_IN_KEY',    'ZLJjnM31JDFwlARoLu6JYTuAwFrsjTtja14wgcGBv7kR1hEMxUEm10soQKJJhzyo');
+define('NONCE_KEY',        '5QiqlRlXtXDYHeV2n6JGNLomKXYchLsDnR6A93RAdun8jW0wKDH0iPCAfVzLDWUL');
+define('AUTH_SALT',        'lXKGHyRxPxgUWlxwjSQFaG7fgqWjGqrAZWplB82ItaydMpuSNdgdNng2jA2UwwiN');
+define('SECURE_AUTH_SALT', 'KWmi9BqCXWDXS9guTBRVhcrrQ3rBHAsMN1RJJh1RKEtSDdtrRAqx5nGvzAaw0QVA');
+define('LOGGED_IN_SALT',   'xUIX8cHPBnyRjh5htGD6mjSRac3ShFfT12Iat3e3vefXy5GqjSgotCDSyHSEl3KO');
+define('NONCE_SALT',       'MBkA6RC3N3eprfUDPGGmnZAxA6cFt7S241Hf7zzsrGFiUCDiik9RY8L5UrTugxmv');
+
+/**
+ * Other customizations.
+ */
+define('FS_METHOD','direct');define('FS_CHMOD_DIR',0755);define('FS_CHMOD_FILE',0644);
+define('WP_TEMP_DIR',dirname(__FILE__).'/wp-content/uploads');
+
+/**
+ * Turn off automatic updates since these are managed upstream.
+ */
+define('AUTOMATIC_UPDATER_DISABLED', true);
+
 
 /**#@-*/
 
@@ -87,5 +99,3 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-
-define('FS_METHOD', 'direct');
